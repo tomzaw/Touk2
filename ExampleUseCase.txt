@@ -1,0 +1,13 @@
+Example use case with frontend ($ is a placeholder).
+
+1.User calls GET "/screenings?date", for example "/screenigs?date=2020-08-01" to see all avaiblable screenings(with times and rooms Ids) for a given day.
+2.User selects screening.
+3.User calls GET "/seats?roomId=$" to gets all seats for a given room.
+4.User calls GET "/seats?screeningId=$" to get all seats available for a given screening.
+5.User selects seats and tickets types.
+6.User calls GET /orders/ticketPrice?screeningId=$&ticketType=$ for each ticket.
+7.User sees the final price for seats.
+8.Use sees expiration time.
+9.User calls POST "/clients" with his personal data.
+10.User calls POST "/orders?voucher=$" (voucher is optional) to reserve the seat/seats(payment is in person).
+11.User calls GET "/orders/id/expirationTime" to see reservation expiration time.
